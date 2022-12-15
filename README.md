@@ -1,6 +1,6 @@
-# Semi-Dense Cross-Modal 6-DoF Tracking of an Event Camera for Challenging Conditions
+# Canny-VOAT
 
-This paper is a novel pipline for cross-modal 6-DoF tracking with an event camera. Because the paper is not published, we only release the compiled file here. We will release the source code when the paper is accepted.
+The present software framework accompanies the paper submission "Semi-Dense Cross-Modal 6-DoF Tracking of an Event Camera in Challenging Conditions". It contains solutions for 6-dof semi-dense tracking with normal cameras as well as cross-modal 6-DoF semi-dense tracking with an event camera. Because the paper is still under review, here we only release binaries that can be used for reproducing the results presented in the paper. The full source code will be releases after the paper is accepted.
 
 ### Related Publications
 
@@ -8,7 +8,7 @@ This paper is a novel pipline for cross-modal 6-DoF tracking with an event camer
 
 # 0. Structure
 
-We provide 4 systems (Canny-DVEO, Canny-EVT, Canny-EVT-- and Canny-VT) in different branches. The main branch is Canny-EVT Every branch is a workspace. We will indiscriminately call these four branches as catkin_ws in this document.
+We provide 4 systems (Canny-DEVO, Canny-EVT, Canny-EVT-- and Canny-VT) in different branches. The main branch is Canny-EVT. Every branch is a workspace. We will indiscriminately call these four branches as catkin_ws in this document.
 
 # 1. Installation
 
@@ -33,7 +33,7 @@ You may need `autoreconf` to compile glog_catkin. To install `autoreconf`, run
 
 	$ sudo apt-get install autoconf
 
-Note that above command may change on different version of Ubuntu. 
+Note that above command may change for different versions of Ubuntu. 
 Please refer to https://askubuntu.com/a/269423 for details.
 
 **yaml-cpp** is only used for loading calibration parameters from yaml files:
@@ -55,12 +55,13 @@ Please refer to https://askubuntu.com/a/269423 for details.
 # 2. Usage
 To run the pipeline, you need to download rosbag files from the [VECtor Page](https://star-datasets.github.io/vector/).
 
-Please note that the code is the compiled file. You cannot see all the source code.
+Please note that the code is a compiled file. The complete source code is not yet released at current stage.
 
-This code is not the release version, the Canny-EVT may not run in real-time.
+This code is not the release version. For example, Canny-EVT may not yet run in real-time. Real-time capable versions are ready and will be released after the paper acceptance.
 
 ## 2.1 Mapping
-We provide some semidense.pcd documentaries in Semidense_Map/VECtor dirctory. You can use the map to run Canny-EVT, Canny-EVT-- and Canny-VT directly.
+
+We provide some maps called semidense.pcd in Semidense_Map/VECtor directory. You can use the map to run Canny-EVT, Canny-EVT-- and Canny-VT directly.
 
 ## 2.2 Our system
 
