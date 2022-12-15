@@ -1,9 +1,0 @@
-<launch>
-  <rosparam param="/use_sim_time">false</rosparam>
-
-  <node name="canny_vt_node_slam" pkg="canny_vt" type="canny_vt_node_slam" args="$(find canny_vt)/cfg/system_mpl_vector.yaml" output="screen" >
-  </node>
-
-  <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find canny_vt)/cfg/system.perspective"></node>
-
-</launch>
